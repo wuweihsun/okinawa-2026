@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>沖繩特攻隊 ｜ 家族旅行</title>
+  <meta name="robots" content="noindex, nofollow">
+  <title>沖繩特攻隊 R2 ｜ 家族旅行</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&display=swap');
@@ -20,76 +21,207 @@
     
     .tab-active { color: #3E3A39; font-weight: 700; }
     .tab-active::after {
-      content: ''; position: absolute; bottom: 0; left: 25%; width: 50%; height: 3px;
+      content: ''; position: absolute; bottom: 0; left: 20%; width: 60%; height: 3px;
       background-color: #8C7A6B; border-radius: 3px 3px 0 0;
     }
     .checkbox-custom:checked + label { text-decoration: line-through; color: #9E958D; }
   </style>
 </head>
-<body class="antialiased pb-12">
+<body class="antialiased pb-16">
 
   <!-- 頂部 Header -->
-  <header class="bg-[#EAE5DF] pt-12 pb-8 px-6 rounded-b-[2.5rem] shadow-sm relative overflow-hidden">
+  <header class="bg-[#EAE5DF] pt-10 pb-7 px-6 rounded-b-[2.5rem] shadow-sm relative overflow-hidden">
     <div class="relative z-10 text-center">
-      <p class="text-xs tracking-[0.2em] text-[#8C7A6B] mb-2 uppercase">Family Trip to Okinawa</p>
+      <p class="text-xs tracking-[0.2em] text-[#8C7A6B] mb-1.5 uppercase font-semibold">Family Trip to Okinawa · R2</p>
       <h1 class="text-3xl font-bold tracking-widest text-[#3E3A39] mb-1">沖繩特攻隊</h1>
-      <p class="text-sm text-[#736A62] mt-2 font-light tracking-wide">11.21 Sat - 11.24 Tue ｜ 4大1小</p>
+      <p class="text-sm text-[#736A62] mt-1.5 font-light tracking-wide">11.21 Sat - 11.24 Tue ｜ 4大1小 (1Y8M)</p>
     </div>
     <div class="absolute -right-6 -bottom-6 opacity-10 text-8xl">🌴</div>
   </header>
 
-  <!-- 日期導覽列 -->
-  <nav class="flex overflow-x-auto no-scrollbar bg-[#F9F8F6] sticky top-0 z-20 px-2 py-2 backdrop-blur-md bg-opacity-90 border-b border-[#EAE5DF] space-x-2">
-    <button onclick="switchTab('day1')" id="tab-day1" class="tab-btn tab-active relative px-4 py-3 text-center text-[#9E958D] whitespace-nowrap transition-colors"><span class="block text-sm tracking-wider">Day 1</span></button>
-    <button onclick="switchTab('day2')" id="tab-day2" class="tab-btn relative px-4 py-3 text-center text-[#9E958D] whitespace-nowrap transition-colors"><span class="block text-sm tracking-wider">Day 2</span></button>
-    <button onclick="switchTab('day3')" id="tab-day3" class="tab-btn relative px-4 py-3 text-center text-[#9E958D] whitespace-nowrap transition-colors"><span class="block text-sm tracking-wider">Day 3</span></button>
-    <button onclick="switchTab('day4')" id="tab-day4" class="tab-btn relative px-4 py-3 text-center text-[#9E958D] whitespace-nowrap transition-colors"><span class="block text-sm tracking-wider">Day 4</span></button>
-    <button onclick="switchTab('flight')" id="tab-flight" class="tab-btn relative px-4 py-3 text-center text-[#9E958D] whitespace-nowrap transition-colors"><span class="block text-sm tracking-wider">機票住宿</span></button>
-    <button onclick="switchTab('packing')" id="tab-packing" class="tab-btn relative px-4 py-3 text-center text-[#9E958D] whitespace-nowrap transition-colors"><span class="block text-sm tracking-wider">行李清單</span></button>
-    <button onclick="switchTab('tasks')" id="tab-tasks" class="tab-btn relative px-4 py-3 text-center text-[#9E958D] whitespace-nowrap transition-colors"><span class="block text-sm tracking-wider">待辦清單</span></button>
-    <button onclick="switchTab('ledger')" id="tab-ledger" class="tab-btn relative px-4 py-3 text-center text-[#9E958D] whitespace-nowrap transition-colors"><span class="block text-sm tracking-wider">公費記帳</span></button>
-    <button onclick="switchTab('chat')" id="tab-chat" class="tab-btn relative px-4 py-3 text-center text-[#9E958D] whitespace-nowrap transition-colors"><span class="block text-sm tracking-wider">留言板</span></button>
+  <!-- 頂部導覽列 -->
+  <nav class="flex overflow-x-auto no-scrollbar bg-[#F9F8F6] sticky top-0 z-20 px-2 py-2 backdrop-blur-md bg-opacity-95 border-b border-[#EAE5DF] space-x-1">
+    <button onclick="switchTab('day1')" id="tab-day1" class="tab-btn tab-active relative px-3.5 py-2.5 text-center text-[#9E958D] whitespace-nowrap transition-colors">
+      <span class="block text-sm tracking-wider">Day 1</span>
+      <span class="block text-[10px] opacity-75">11/21 南部</span>
+    </button>
+    <button onclick="switchTab('day2')" id="tab-day2" class="tab-btn relative px-3.5 py-2.5 text-center text-[#9E958D] whitespace-nowrap transition-colors">
+      <span class="block text-sm tracking-wider">Day 2</span>
+      <span class="block text-[10px] opacity-75">11/22 北部</span>
+    </button>
+    <button onclick="switchTab('day3')" id="tab-day3" class="tab-btn relative px-3.5 py-2.5 text-center text-[#9E958D] whitespace-nowrap transition-colors">
+      <span class="block text-sm tracking-wider">Day 3</span>
+      <span class="block text-[10px] opacity-75">11/23 中部</span>
+    </button>
+    <button onclick="switchTab('day4')" id="tab-day4" class="tab-btn relative px-3.5 py-2.5 text-center text-[#9E958D] whitespace-nowrap transition-colors">
+      <span class="block text-sm tracking-wider">Day 4</span>
+      <span class="block text-[10px] opacity-75">11/24 南部</span>
+    </button>
+    <button onclick="switchTab('maps')" id="tab-maps" class="tab-btn relative px-3.5 py-2.5 text-center text-[#9E958D] whitespace-nowrap transition-colors">
+      <span class="block text-sm tracking-wider">🗺️ 圖鑑攻略</span>
+      <span class="block text-[10px] opacity-75">地圖/菜單</span>
+    </button>
+    <button onclick="switchTab('flight')" id="tab-flight" class="tab-btn relative px-3.5 py-2.5 text-center text-[#9E958D] whitespace-nowrap transition-colors">
+      <span class="block text-sm tracking-wider">✈️ 機酒停車</span>
+      <span class="block text-[10px] opacity-75">航班/飯店</span>
+    </button>
+    <button onclick="switchTab('packing')" id="tab-packing" class="tab-btn relative px-3.5 py-2.5 text-center text-[#9E958D] whitespace-nowrap transition-colors">
+      <span class="block text-sm tracking-wider">🧳 行李清單</span>
+      <span class="block text-[10px] opacity-75">檢查勾選</span>
+    </button>
+    <button onclick="switchTab('tasks')" id="tab-tasks" class="tab-btn relative px-3.5 py-2.5 text-center text-[#9E958D] whitespace-nowrap transition-colors">
+      <span class="block text-sm tracking-wider">🛍️ 待辦購物</span>
+      <span class="block text-[10px] opacity-75">共同清單</span>
+    </button>
+    <button onclick="switchTab('ledger')" id="tab-ledger" class="tab-btn relative px-3.5 py-2.5 text-center text-[#9E958D] whitespace-nowrap transition-colors">
+      <span class="block text-sm tracking-wider">💴 公費記帳</span>
+      <span class="block text-[10px] opacity-75">自動分帳</span>
+    </button>
+    <button onclick="switchTab('chat')" id="tab-chat" class="tab-btn relative px-3.5 py-2.5 text-center text-[#9E958D] whitespace-nowrap transition-colors">
+      <span class="block text-sm tracking-wider">💬 留言板</span>
+      <span class="block text-[10px] opacity-75">即時同步</span>
+    </button>
   </nav>
 
   <!-- 內容顯示區 -->
-  <main class="px-5 mt-8" id="main-content">
+  <main class="px-5 mt-6" id="main-content">
     
     <!-- 1. 行程表區塊 -->
     <div id="view-schedule" class="view-section block">
+      <!-- 當日路線總覽橫幅 -->
+      <div id="day-route-banner" class="bg-[#EAE5DF] bg-opacity-60 text-[#5C544D] text-xs px-4 py-3 rounded-2xl mb-6 border border-[#EAE5DF] leading-relaxed font-medium"></div>
       <div class="relative ml-2 mb-10" id="timeline-wrapper"></div>
     </div>
 
-    <!-- 2. 機票與住宿區塊 -->
-    <div id="view-flight" class="view-section hidden space-y-6">
-      <div class="bg-white rounded-2xl p-6 shadow-sm border border-[#EAE5DF]">
-        <h3 class="font-serif-tc font-bold text-xl mb-4">✈️ 航班資訊</h3>
-        <div class="space-y-4 text-sm text-[#5C544D]">
-          <div class="p-4 bg-[#F9F8F6] rounded-xl border border-[#F0EBE6]">
-            <p class="font-bold text-[#8C7A6B] mb-1">去程｜11月21日 (六)</p>
-            <p>台灣虎航 IT288</p>
-            <p class="mt-1">09:45 高雄小港 ➔ 12:30 沖繩那霸</p>
+    <!-- 2. 圖鑑與地圖攻略區塊 (整合 PDF 第4~11頁圖文) -->
+    <div id="view-maps" class="view-section hidden space-y-6">
+      <div class="bg-[#FDF8F2] p-4 rounded-2xl border border-[#F6E9DB] text-xs text-[#8C7558] leading-relaxed">
+        💡 <strong>圖片顯示小撇步：</strong>我已將 PDF 圖鑑內的所有重點文字整理於下方。若想直接在網頁點擊放大看原圖，只需將圖片存成對應檔名（如 <code>airport.jpg</code>）上傳至 GitHub 同一資料夾，下方就會自動浮現高清圖片！
+      </div>
+
+      <!-- 那霸機場平面圖攻略 -->
+      <div class="bg-white rounded-2xl p-5 shadow-sm border border-[#EAE5DF]">
+        <h3 class="font-serif-tc font-bold text-lg text-[#3E3A39] mb-3">🛫 那霸機場 1F~3F 必買必吃攻略</h3>
+        <img src="airport.jpg" onerror="this.style.display='none'" onclick="openLightbox(this.src)" class="w-full rounded-xl mb-4 border border-[#EAE5DF] cursor-zoom-in" alt="那霸機場平面圖">
+        <div class="space-y-2.5 text-sm text-[#5C544D]">
+          <div class="p-3 bg-[#F9F8F6] rounded-xl">
+            <span class="font-bold text-[#8C7A6B] block">1F 到達大廳</span>
+            • <strong>豬肉蛋飯糰 (ポーたま)</strong>：國內線到達大廳店（1F HIS櫃台旁）<br>
+            • <strong>租車接駁車乘車處</strong>：國內線/國際線 1F 戶外乘車點
           </div>
-          <div class="p-4 bg-[#F9F8F6] rounded-xl border border-[#F0EBE6]">
-            <p class="font-bold text-[#8C7A6B] mb-1">回程｜11月24日 (二)</p>
-            <p>台灣虎航 IT289</p>
-            <p class="mt-1">14:00 沖繩那霸 ➔ 14:55 高雄小港</p>
+          <div class="p-3 bg-[#F9F8F6] rounded-xl">
+            <span class="font-bold text-[#8C7A6B] block">2F 出發大廳 & YUINICHI St. (最好買！)</span>
+            • <strong>國內線側</strong>：福木屋年輪蛋糕、黑糖可麗露、PUZO起司蛋糕、空港食堂、御菓子御殿、oHacorte水果塔、HABUBOX、鹽屋<br>
+            • <strong>中央連通道 (YUINICHI St.)</strong>：美麗海專賣店、扭蛋區、藥妝店、黑船蜂蜜蛋糕、辻利抹茶、BicCamera、無印良品<br>
+            • <strong>國際線出境區</strong>：DFS免稅店、SHISEIDO、Royce巧克力、砂糖樹
+          </div>
+          <div class="p-3 bg-[#F9F8F6] rounded-xl">
+            <span class="font-bold text-[#8C7A6B] block">3F 餐廳區</span>
+            • <strong>A&W 漢堡</strong>（國內線 3F 景觀餐廳旁）、<strong>牛排屋88</strong>
           </div>
         </div>
       </div>
+
+      <!-- 5大必吃甜點圖鑑 -->
+      <div class="bg-white rounded-2xl p-5 shadow-sm border border-[#EAE5DF]">
+        <h3 class="font-serif-tc font-bold text-lg text-[#3E3A39] mb-3">🍰 沖繩 5 大甜點咖啡圖鑑</h3>
+        <img src="desserts.jpg" onerror="this.style.display='none'" onclick="openLightbox(this.src)" class="w-full rounded-xl mb-4 border border-[#EAE5DF] cursor-zoom-in" alt="甜點圖鑑">
+        <div class="grid grid-cols-1 gap-2.5 text-sm text-[#5C544D]">
+          <div class="p-3 bg-[#F9F8F6] rounded-xl">🍩 <strong>松原屋製菓</strong>：傳統沙翁（沖繩炸甜甜圈），營業時間 09:00–18:00（國際通市場本通）。</div>
+          <div class="p-3 bg-[#F9F8F6] rounded-xl">🍦 <strong>雪塩國際通本店</strong>：必吃雪鹽冰淇淋（可撒多種口味鹽巴），營業時間 10:00–22:00。</div>
+          <div class="p-3 bg-[#F9F8F6] rounded-xl">☕ <strong>Shinmei Coffee (The Sinmay)</strong>：超療癒手夾大塊黑糖拿鐵，營業時間 10:00–16:30（Day 2 北部）。</div>
+          <div class="p-3 bg-[#F9F8F6] rounded-xl">🥧 <strong>oHacorte 水果塔</strong>：港川外人住宅人氣新鮮水果塔，營業時間 10:30–19:00（那霸機場2F亦有分店）。</div>
+          <div class="p-3 bg-[#F9F8F6] rounded-xl">🧁 <strong>Houki Boshi 可麗露 & 大嘴鳥咖啡</strong>：港川外人住宅必買迷你黑糖可麗露（11:30–18:00）搭配 Beans Store 大嘴鳥咖啡（10:30–18:00）。</div>
+        </div>
+      </div>
+
+      <!-- 沖繩北中南美食與景點地圖 -->
+      <div class="bg-white rounded-2xl p-5 shadow-sm border border-[#EAE5DF]">
+        <h3 class="font-serif-tc font-bold text-lg text-[#3E3A39] mb-3">🗺️ 沖繩北中南 美食 & 景點總覽</h3>
+        <img src="food_map.jpg" onerror="this.style.display='none'" onclick="openLightbox(this.src)" class="w-full rounded-xl mb-3 border border-[#EAE5DF] cursor-zoom-in" alt="沖繩美食地圖">
+        <img src="spot_map.jpg" onerror="this.style.display='none'" onclick="openLightbox(this.src)" class="w-full rounded-xl mb-4 border border-[#EAE5DF] cursor-zoom-in" alt="沖繩景點地圖">
+        <div class="space-y-3 text-sm text-[#5C544D]">
+          <div class="p-3 bg-[#F9F8F6] rounded-xl">
+            <span class="font-bold text-[#8C7A6B] block">🌊 沖繩北部（本部町 / 名護 / 古宇利島）</span>
+            • <strong>景點</strong>：美麗海水族館、古宇利島/海洋塔、許田休息站、名護鳳梨園、萬座毛<br>
+            • <strong>美食</strong>：蝦蝦餐車、百年古家大家、燒肉乃我那霸、岸本食堂、花人逢
+          </div>
+          <div class="p-3 bg-[#F9F8F6] rounded-xl">
+            <span class="font-bold text-[#8C7A6B] block">🎡 沖繩中部（北谷美國村 / 浦添港川）</span>
+            • <strong>景點</strong>：美國村、日落沙灘、港川外人住宅、PARCO CITY、永旺夢樂城<br>
+            • <strong>美食</strong>：グルメ迴轉壽司市場、極味や牛排、oHacorte水果塔、塔可飯Kijimuna、浜屋
+          </div>
+          <div class="p-3 bg-[#F9F8F6] rounded-xl">
+            <span class="font-bold text-[#8C7A6B] block">⛩️ 沖繩南部（那霸市區 / 豐見城）</span>
+            • <strong>景點</strong>：國際通、屋台村、波上宮、首里城、達摩寺、ASHIBINAA Outlet、瀨長島<br>
+            • <strong>美食</strong>：琉家拉麵、炭火焼肉ぶち、暖暮拉麵、豬肉蛋飯糰、松原屋沙翁、鹽屋
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. 機票、住宿與停車場總覽區塊 -->
+    <div id="view-flight" class="view-section hidden space-y-6">
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-[#EAE5DF]">
+        <h3 class="font-serif-tc font-bold text-xl mb-4">🅿️ 重要停車場快速導航</h3>
+        <div class="grid grid-cols-1 gap-3 text-sm">
+          <a href="https://maps.app.goo.gl/HiwUHp3UGQ24E47e9?g_st=il" target="_blank" class="flex items-center justify-between p-3.5 bg-[#F9F8F6] rounded-xl border border-[#EAE5DF] text-[#3E3A39] font-medium hover:bg-[#F0EBE6]">
+            <span>🏨 休伊特飯店附近停車場</span>
+            <span class="text-xs text-[#8C7A6B] font-bold">開啟地圖 ➔</span>
+          </a>
+          <a href="https://maps.app.goo.gl/d46cNQo4iShhfbAc6" target="_blank" class="flex items-center justify-between p-3.5 bg-[#F9F8F6] rounded-xl border border-[#EAE5DF] text-[#3E3A39] font-medium hover:bg-[#F0EBE6]">
+            <span>🐋 美麗海水族館 (海生館) 停車場</span>
+            <span class="text-xs text-[#8C7A6B] font-bold">開啟地圖 ➔</span>
+          </a>
+          <a href="https://maps.app.goo.gl/dqoKFfjhxVr1Yx579" target="_blank" class="flex items-center justify-between p-3.5 bg-[#F9F8F6] rounded-xl border border-[#EAE5DF] text-[#3E3A39] font-medium hover:bg-[#F0EBE6]">
+            <span>🥩 燒肉 Buchi 停車場 (點位 1)</span>
+            <span class="text-xs text-[#8C7A6B] font-bold">開啟地圖 ➔</span>
+          </a>
+          <a href="https://maps.app.goo.gl/ZRNc2V6uUASc2yYk6" target="_blank" class="flex items-center justify-between p-3.5 bg-[#F9F8F6] rounded-xl border border-[#EAE5DF] text-[#3E3A39] font-medium hover:bg-[#F0EBE6]">
+            <span>🥩 燒肉 Buchi 停車場 (點位 2)</span>
+            <span class="text-xs text-[#8C7A6B] font-bold">開啟地圖 ➔</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-[#EAE5DF]">
+        <h3 class="font-serif-tc font-bold text-xl mb-4">✈️ 航班資訊 (台灣虎航)</h3>
+        <div class="space-y-4 text-sm text-[#5C544D]">
+          <div class="p-4 bg-[#F9F8F6] rounded-xl border border-[#F0EBE6]">
+            <p class="font-bold text-[#8C7A6B] mb-1">去程｜2026/11/21 (六)</p>
+            <p class="font-semibold text-[#3E3A39]">台灣虎航 IT288</p>
+            <p class="mt-1">09:45 高雄小港 ➔ 12:30 沖繩那霸 (飛行約 2h)</p>
+          </div>
+          <div class="p-4 bg-[#F9F8F6] rounded-xl border border-[#F0EBE6]">
+            <p class="font-bold text-[#8C7A6B] mb-1">回程｜2026/11/24 (二)</p>
+            <p class="font-semibold text-[#3E3A39]">台灣虎航 IT289</p>
+            <p class="mt-1">14:00 沖繩那霸 ➔ 14:55 高雄小港 (飛行約 1h55m)</p>
+          </div>
+        </div>
+      </div>
+
       <div class="bg-white rounded-2xl p-6 shadow-sm border border-[#EAE5DF]">
         <h3 class="font-serif-tc font-bold text-xl mb-4">🏨 住宿資訊</h3>
         <div class="space-y-2 text-sm text-[#5C544D]">
           <p class="font-bold text-base text-[#3E3A39] mb-2">那霸休伊特渡假飯店<br><span class="text-xs text-[#9E958D] font-normal">HEWITT RESORT NAHA</span></p>
-          <p><strong>地址：</strong> 〒902-0067 那霸市安里 2-5-16</p>
-          <p><strong>費用：</strong> 機+酒 Total $23,700/人 + $3300</p>
+          <p><strong>入住時間：</strong> 11/21 (六) 15:00 後</p>
+          <p><strong>退房時間：</strong> 11/24 (二) 11:00 前</p>
+          <p><strong>早餐供應：</strong> 1F 餐廳 06:30 ~ 10:00</p>
+          <p><strong>電話：</strong> (+81) 98-943-8325</p>
+          <p><strong>地址：</strong> 〒902-0067 沖繩縣那霸市安里 2-5-16</p>
+          <p><strong>費用：</strong> 機+酒 Total $23,700/人 + $3,300</p>
+          <div class="grid grid-cols-2 gap-2 mt-4 pt-2">
+            <a href="https://hewitt-resort.com/naha/" target="_blank" class="text-center py-2.5 bg-[#F5F2EF] text-[#8C7A6B] font-bold rounded-xl border border-[#EAE5DF] text-xs">🌐 飯店官網</a>
+            <a href="https://maps.app.goo.gl/HiwUHp3UGQ24E47e9?g_st=il" target="_blank" class="text-center py-2.5 bg-[#8C7A6B] text-white font-bold rounded-xl text-xs">🅿️ 附近停車場</a>
+          </div>
         </div>
       </div>
     </div>
     
-    <!-- 3. 行李清單 -->
+    <!-- 4. 行李清單 -->
     <div id="view-packing" class="view-section hidden"><div id="checklist-container" class="space-y-4"></div></div>
     
-    <!-- 4. 待辦與購物清單 -->
+    <!-- 5. 待辦與購物清單 -->
     <div id="view-tasks" class="view-section hidden space-y-6">
       <div class="bg-white rounded-2xl p-5 shadow-sm border border-[#EAE5DF]">
         <h3 class="font-serif-tc font-bold text-[#8C7A6B] mb-3">✅ 共同待辦事項</h3>
@@ -109,7 +241,7 @@
       </div>
     </div>
     
-    <!-- 5. 記帳本 -->
+    <!-- 6. 記帳本 -->
     <div id="view-ledger" class="view-section hidden space-y-6">
       <div class="bg-white rounded-2xl p-5 shadow-sm border border-[#EAE5DF]">
         <h3 class="font-serif-tc font-bold text-[#8C7A6B] mb-3">📝 新增公費支出</h3>
@@ -130,7 +262,7 @@
       </div>
     </div>
     
-    <!-- 6. 留言板 -->
+    <!-- 7. 留言板 -->
     <div id="view-chat" class="view-section hidden">
       <div class="bg-white rounded-2xl p-5 shadow-sm border border-[#EAE5DF] mb-6">
         <h3 class="font-serif-tc font-bold text-lg mb-3">團員佈告欄 💬</h3>
@@ -142,11 +274,24 @@
     </div>
   </main>
 
+  <!-- 圖片全螢幕放大檢視燈箱 (Lightbox) -->
+  <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden flex items-center justify-center p-3" onclick="closeLightbox()">
+    <button class="absolute top-5 right-5 text-white text-3xl font-bold">&times;</button>
+    <img id="lightbox-img" src="" class="max-w-full max-h-[90vh] rounded-lg shadow-2xl object-contain" alt="放大檢視">
+  </div>
+
   <script type="module">
-    // 💡 清除所有標記亂碼的過濾器
     function cleanStr(str) {
       if (!str) return '';
-      return str.replace(/\+\]/g, '');
+      return str.replace(/\[cite:\s*[\d,\s]+\]/g, '');
+    }
+
+    window.openLightbox = function(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.remove('hidden');
+    }
+    window.closeLightbox = function() {
+      document.getElementById('lightbox').classList.add('hidden');
     }
 
     // ==========================================
@@ -189,68 +334,222 @@
     });
 
     // ==========================================
-    // 2. 原汁原味完整版行程資料
+    // 2. R2 最新完整版行程資料
     // ==========================================
+    const dayRoutes = {
+      1: "📍 Day 1 (南部)：那霸機場 ➔ OTS 臨空豐崎營業所 ➔ ASHIBINAA Outlet / SPORTS DEPO ➔ 那霸休伊特渡假飯店 ➔ 國際通 / 國際通屋台村 / 晚餐拉麵",
+      2: "📍 Day 2 (北部)：那霸休伊特渡假飯店 ➔ 許田休息站 ➔ 美麗海水族館(午餐) ➔ The Sinmay ➔ 古宇利海洋塔 ➔ 晚餐・炭火燒肉",
+      3: "📍 Day 3 (中部)：飯店 ➔ 達摩寺 ➔ 首里城 ➔ 波上宮 ➔ PARCO CITY ➔ 港川外人住宅(下午茶) ➔ 日落沙灘 ➔ 晚餐・迴轉壽司、美國村",
+      4: "📍 Day 4 (南部)：飯店 ➔ OTS 臨空豐崎營業所 ➔ 那霸機場 ➔ 溫暖的家♡"
+    };
+
     const itinerary = {
       1: [
-        { time: "06:00 - 07:15", title: "台南 ➔ 高雄小港機場", stay: "1h15min", drive: "1h15min", transport: "-", notes: "提前1至3天填寫 Visit Japan Web。參考填寫VJW。", extra: "VJW 可先將全家人的護照建檔，並把 QR Code 截圖存相簿避免網路不穩。" },
-        { time: "07:15 - 09:45", title: "機場報到手續", stay: "2h30min", drive: "-", transport: "-", notes: "辦理登機手續(起飛前2.5小時抵達機場)。\n必備: 1.護照 2.台灣駕照 3.駕照日文譯本 4.實體信用卡 5.日幣。\n確認可以收到台灣號碼的簡訊。", extra: "推車可以直接推到登機口再機邊託運，減輕等待時的負擔。" },
-        { time: "09:45 - 12:30", title: "小港機場 ➔ 那霸機場", stay: "-", drive: "2h", transport: "虎航 IT288", notes: "-", extra: "飛機起降時艙壓變化容易讓寶寶耳朵痛，準備好水壺或米餅在滑行時使用。" },
-        { time: "12:30 - 13:30", title: "出關與領行李", stay: "1h", drive: "-", transport: "-", notes: "出關 領行李 ➔ 廁所。", extra: "出關人潮多，建議一下機就讓寶寶坐上推車，並帶至機場廁所換一次乾淨的尿布。" },
-        { time: "13:50 - 14:30", title: "機場接駁 ➔ 領車", stay: "-", drive: "20min", transport: "機場接送", notes: "機場接駁車 OTS 臨空豐崎營業所 ➔ 租車領車。\n※出發2天前可於預約確認頁面確認事前講解內容。\n高速公路速限80km/hr。", extra: "取車時請確實檢查預約的幼兒座椅是否安裝穩固。" },
-        { time: "14:40 - 17:00", title: "ASHIBINAA / 波上宮", stay: "2h20min", drive: "10min", transport: "自駕", notes: "ASHIBINAA Outlet SPORTS DEPO/Kohnan PRO。附近有SPORTS DEPO開車過去3分鐘門口有停車位。\n(停留20min) 波上宮/波之上海灘(有時間可去)。早上9點-晚上5點販賣書包御守。", extra: "這段路程短，寶寶可能在車上入睡。逛 Outlet 時可留一位大人看顧推車。" },
-        { time: "17:30 - 18:00", title: "那霸休伊特渡假飯店", stay: "30min", drive: "-", transport: "自駕", notes: "3點後可以Check-in 卸行李, 讓小孩稍作休息。13F可以看夜景。", extra: "進房後讓寶寶喝個水、稍微活動筋骨，適應一下新環境。" },
-        { time: "18:00 - 自由", title: "國際通晚餐自由活動", stay: "-", drive: "-", transport: "走路/自駕", notes: "國際通, 國際通屋台村 / 逛街晚餐自由活動。琉貿百貨(營業時間10:00-20:00)。\n琉家拉麵 國際通本店 (營業時間11:30-00:00, 推黑蒜豚骨拉麵! 開車8分鐘走路20分1.4公里)。", extra: "屋台村空間擁擠，帶寶寶建議在周邊感受氣氛；拉麵店若無兒童椅，可將推車推入桌邊。" }
+        { 
+          time: "06:00 - 07:15", title: "台南 ➔ 高雄小港機場", stay: "-", drive: "1h15min", hours: "-", transport: "-", 
+          notes: "• 提前1至3天填寫 Visit Japan Web (參考填寫VJW)", 
+          extra: "VJW 可先將全家人的護照建檔，並把 QR Code 截圖存進手機相簿，避免下機時網路不穩。",
+          links: [{ label: "🌐 Visit Japan Web", url: "https://vjw-lp.digital.go.jp/zh-hant/" }]
+        },
+        { 
+          time: "07:15 - 09:45", title: "辦理登機手續", stay: "2h30min", drive: "-", hours: "-", transport: "-", 
+          notes: "• 起飛前2.5小時抵達機場\n• 必備檢查：1.護照 2.台灣駕照 3.駕照日文譯本 4.實體信用卡 5.日幣\n• 確認可以收到台灣號碼的簡訊", 
+          extra: "嬰兒推車可於報到櫃檯詢問「機邊託運」，一路推到登機門前再交給地勤，大人雙手更輕鬆。" 
+        },
+        { 
+          time: "09:45 - 12:30", title: "高雄小港機場 ➔ 沖繩那霸機場", stay: "-", drive: "2h", hours: "-", transport: "虎航 IT288", 
+          notes: "• 搭乘台灣虎航 IT288 航班飛往那霸", 
+          extra: "起降時艙壓變化易讓 1歲8個月寶寶耳朵不適，飛機加速滑行時可準備水壺、吸管杯或米餅讓寶寶吞嚥。" 
+        },
+        { 
+          time: "12:30 - 13:30", title: "出關 領行李 ➔ 廁所", stay: "1h", drive: "-", hours: "-", transport: "-", 
+          notes: "• 出關領取行李與嬰兒推車后先上廁所\n• ※出發2天前可於預約確認頁面確認 OTS 事前講解內容", 
+          extra: "出關後先帶寶寶去洗手間換片乾淨尿布，接著前往國際線 1F 戶外租車接駁車乘車處。" 
+        },
+        { 
+          time: "13:50 - 14:30", title: "機場接駁車 ➔ OTS 臨空豐崎營業所領車", stay: "40min", drive: "20min", hours: "-", transport: "機場接送", 
+          notes: "• 搭乘機場接駁車前往 OTS 臨空豐崎營業所辦理租車領車\n• 注意：沖繩高速公路速限 80km/hr", 
+          extra: "取車時請務必確認幼兒安全座椅安裝穩固，並檢查車身外觀拍照留存。" 
+        },
+        { 
+          time: "14:40 - 17:40", title: "ASHIBINAA Outlet / SPORTS DEPO / Kohnan PRO", stay: "3h", drive: "10min", hours: "Outlet 10:00~20:00 / DEPO 10:00~21:00 / Kohnan 06:00~20:00", transport: "自駕", 
+          notes: "• ASHIBINAA Outlet (停放於 Ashibinaa Multi Storey Parking 立體停車場)\n• SPORTS DEPO (開車過去3分鐘，門口有停車位)\n• Kohnan PRO Tomigusuku Toyosaki (營業 06:00~20:00)", 
+          extra: "這3小時剛好涵蓋寶寶的午睡時間，園區平坦好推車，寶寶睡著時大人可輪流看顧並盡情採買運動與露營工具！" 
+        },
+        { 
+          time: "18:10 - 18:40", title: "那霸休伊特渡假飯店 HEWITT RESORT NAHA", stay: "30min", drive: "30min", hours: "15:00後可 Check-in", transport: "自駕", 
+          notes: "• 1. Check-in 卸行李，讓小孩稍作休息\n• 2. 13F 可以看夜景", 
+          extra: "已為您整合飯店附近停車點！停好車進房卸下大件行李後，帶輕便隨身包與推車去國際通。",
+          links: [
+            { label: "🅿️ 飯店附近停車場導航", url: "https://maps.app.goo.gl/HiwUHp3UGQ24E47e9?g_st=il" },
+            { label: "🌐 飯店官網", url: "https://hewitt-resort.com/naha/" }
+          ]
+        },
+        { 
+          time: "18:55 - 晚間", title: "國際通、屋台村 / 逛街晚餐自由活動", stay: "自由活動", drive: "15min", hours: "琉家拉麵 11:30~00:00 / 琉貿 10:00~20:00 / 雪塩 10:00~22:00", transport: "走路/自駕", 
+          notes: "• 琉家拉麵 國際通本店：大推黑蒜豚骨拉麵！(但俺貳永遠NO.1!!)\n• 琉貿百貨 (10:00~20:00，B1有超市可逛)\n• 雪塩國際通本店 (雪鹽冰淇淋)\n• 松原屋製菓 (09:00~18:00，沙翁/炸甜甜圈)", 
+          extra: "拉麵店可點白飯或較清淡配料分食給寶寶；屋台村夜晚較熱鬧擁擠，推嬰兒車請留意週遭步伐。",
+          img: "desserts.jpg"
+        }
       ],
       2: [
-        { time: "06:30 - 08:00", title: "飯店早餐", stay: "1h30min", drive: "-", transport: "-", notes: "飯店1F早餐供應時間6:30~10:00 (若早點吃完提早出發)。", extra: "利用飯店的水煮蛋、白飯或烤土司，搭配自備兒童餐具讓寶寶吃飽。" },
-        { time: "08:00 - ", title: "許田休息站", stay: "-", drive: "1h", transport: "自駕", notes: "營業時間為8:30~19:00 / 休息順便買水族館與海洋塔門票。\n要提早靠左行駛入停車場後走天橋過去。", extra: "長途車程的中繼站，抱寶寶下車透透氣、換片尿布。" },
-        { time: "09:40 - 12:40", title: "美麗海水族館", stay: "3h", drive: "40min", transport: "自駕", notes: "海豚秀 10:30, 11:30, 13:00 / 餵食秀 15:00, 17:00 / 黑潮 09:30-19:00。\n紀念幣+300變吊飾 / 海牛餵食 / 瞭望台拍照。", extra: "館內無障礙坡道完善推車方便。冷氣較強記得帶寶寶薄外套。" },
-        { time: "13:10 - 14:00", title: "古宇利蝦蝦飯", stay: "50min", drive: "30min", transport: "自駕", notes: "古宇利蝦蝦飯 / Plan B 海膽蓋飯。", extra: "蝦蝦飯口味較重，建議自備寶寶粥，或撥一些無調味的蝦肉給寶寶。" },
-        { time: "14:05 - 15:00", title: "古宇利海洋塔", stay: "55min", drive: "5min", transport: "自駕", notes: "古宇利海洋塔門票。\n(周邊備註: Shinmei Coffee 風糖拿鐵，車程20min)。", extra: "搭乘自動高爾夫球車非常平穩，寶寶可以和大人一起開心坐著吹風。" },
-        { time: "15:30 - 17:00", title: "名護鳳梨園", stay: "1h30min", drive: "30min", transport: "自駕", notes: "(有時間可去) 整體園區: 10:00~18:00 (最後入園時間17:30)。", extra: "園區內有鳳梨造型遊園車，對幼兒來說是很棒的視覺體驗。" },
-        { time: "18:10 - ", title: "返回飯店", stay: "-", drive: "1h10min", transport: "自駕", notes: "那霸休伊特渡假飯店HEWITT RESORT NAHA。", extra: "回程時間長，可在車上播放輕音樂讓寶寶補眠。" },
-        { time: "18:40 - 20:40", title: "炭火焼肉ぶち 久茂總店", stay: "2h", drive: "8min", transport: "自駕", notes: "已預約4大人1兒童。\n走路約23分鐘1.6公里。", extra: "炭火危險，務必讓寶寶坐在內側。可烤無調味的蔬菜(玉米/南瓜)給寶寶吃。" }
+        { 
+          time: "06:30 - 08:00", title: "那霸休伊特渡假飯店 1F早餐", stay: "1h30min", drive: "-", hours: "06:30~10:00", transport: "-", 
+          notes: "• 飯店 1F 享用豐盛自助早餐\n• 若早點吃完可提早出發前往北部", 
+          extra: "休伊特的早餐非常出名（有自助漢堡吧與豐富熟食），可挑選水煮蛋、軟麵包、鮮奶或粥品讓寶寶吃飽。",
+          links: [{ label: "🅿️ 飯店附近停車場導航", url: "https://maps.app.goo.gl/HiwUHp3UGQ24E47e9?g_st=il" }]
+        },
+        { 
+          time: "09:00 - 09:20", title: "許田休息站 (道の駅 許田)", stay: "20min", drive: "1h", hours: "08:30~19:00", transport: "自駕", 
+          notes: "• 1. 要提早靠左行駛入停車場後走天橋過去 (Mapcode: 206 476 705*46)\n• 2. 休息順便買美麗海水族館優惠門票 4 張 (2,000日圓/張)", 
+          extra: "由南往北下高速公路接58號國道後，看到分岔口請務必提早靠左切入停車場，走天橋到對面買票，海景非常漂亮！",
+          img: "kyoda.jpg"
+        },
+        { 
+          time: "10:10 - 15:10", title: "美麗海水族館 / 午餐", stay: "5h", drive: "50min", hours: "08:30~18:30 (黑潮 09:30~19:00)", transport: "自駕", 
+          notes: "• 午餐選擇：4F-INOH (海景景觀餐廳) 或 黑潮之海水族箱旁 Ocean Blue (邊看大魚邊用餐)\n• 海豚秀時間：10:30、11:30、13:00\n• 餵食秀時間：15:00、17:00\n• 黑潮之海：09:30-19:00", 
+          extra: "停留5小時非常充裕！建議停在您指定的停車場（離水族館入口最近）。館內電梯與無障礙坡道極為完善，若想坐 Ocean Blue 水族箱旁座位，建議一進館先去抽號碼牌候位。",
+          links: [
+            { label: "🅿️ 海生館(水族館)停車場導航", url: "https://maps.app.goo.gl/d46cNQo4iShhfbAc6" },
+            { label: "🌐 美麗海水族館官網", url: "https://churaumi.okinawa/tc/" }
+          ]
+        },
+        { 
+          time: "15:40 - 16:10", title: "Shinmei Coffee The Sinmay (彈性行程)", stay: "30min", drive: "30min", hours: "10:00~16:30", transport: "自駕", 
+          notes: "• 必點招牌：黑糖拿鐵（附夾子夾住大塊沖繩黑糖）", 
+          extra: "注意營業時間至 16:30，從水族館離開後順路前往買杯黑糖拿鐵提神非常棒！",
+          links: [{ label: "🗺️ Shinmei Coffee 地圖", url: "https://maps.app.goo.gl/cKNvY8WK3Awi2dHQ7" }],
+          img: "desserts.jpg"
+        },
+        { 
+          time: "16:30 - 18:00", title: "古宇利海洋塔 (彈性行程)", stay: "1h30min", drive: "20min", hours: "10:00~18:00", transport: "自駕", 
+          notes: "• 搭乘全自動無人駕駛高爾夫遊園車上塔（車程約 7 分鐘）\n• 飽覽古宇利大橋與漸層古宇利藍海景", 
+          extra: "7分鐘的自動遊園車有語音導覽且速度平緩，1歲8個月寶寶跟大人一起搭乘吹海風會非常開心。" 
+        },
+        { 
+          time: "20:00 - 22:00", title: "炭火焼肉ぶち 久茂總店 (Buchi)", stay: "2h", drive: "約1h20min", hours: "17:00~22:00", transport: "走路/自駕", 
+          notes: "• 已完成線上預約：4大人 1兒童，預約時間 20:20\n• 預約姓名：WU ROUYU\n• 店鋪地址：3-12-1 Kumoji, Naha City (國際通附近)\n• 電話號碼：098-943-6567", 
+          extra: "已為您嵌入兩個專屬停車點！燒肉店有炭火爐，請讓寶寶坐在最內側，可點白飯、熟食或無調味蔬菜分食。",
+          links: [
+            { label: "🅿️ 燒肉停車點 1 導航", url: "https://maps.app.goo.gl/dqoKFfjhxVr1Yx579" },
+            { label: "🅿️ 燒肉停車點 2 導航", url: "https://maps.app.goo.gl/ZRNc2V6uUASc2yYk6" }
+          ]
+        }
       ],
       3: [
-        { time: "06:30 - 08:20", title: "飯店早餐", stay: "1h50min", drive: "-", transport: "-", notes: "飯店1F早餐供應時間6:30~10:00 (若早點吃完提早出發)。", extra: "多補充一些水分準備一天的行程。" },
-        { time: "08:30 - 09:00", title: "達摩寺", stay: "30min", drive: "10min", transport: "自駕", notes: "早上7點-晚上6點販賣透明御守。", extra: "石階梯較多，推車稍微不便，可機動使用揹巾。" },
-        { time: "09:10 - 09:40", title: "首里城 ➔ 波上宮", stay: "30min", drive: "10min", transport: "走路/自駕", notes: "若Day1沒去波上宮可前往。\n11/23重建完成正式對外開放 08:30-19:00。", extra: "首里城石板路稍微顛簸，若推嬰兒車需放慢速度。" },
-        { time: "10:00 - 13:00", title: "PARCO CITY", stay: "3h", drive: "20min", transport: "自駕", notes: "10:00-22:00 逛街/午餐。\n極味や沖縄バルコシティ店(牛排評價很好)。", extra: "這間商場育嬰設施(尿布台/哺乳室)極佳，是遛小孩的好地方。" },
-        { time: "13:10 - 13:40", title: "港川外人住宅", stay: "30min", drive: "10min", transport: "自駕", notes: "ohacorte 水果塔 10:30-19:00。\nHouki Boshi 可麗露 11:30-18:00。\nOkinawa Cerrado Coffee 大嘴鳥咖啡 / 下午茶。", extra: "巷弄內常有車輛駛入，讓寶寶下地走動時請牽緊。" },
-        { time: "14:00 - 17:00", title: "美國村", stay: "3h", drive: "20min", transport: "走路/自駕", notes: "10:00-22:00。日落沙灘 Chatan Park Sunset Beach。", extra: "日落沙灘沙質很細，適合帶小毛巾讓寶寶踩沙放電。" },
-        { time: "17:00 - 晚餐", title: "グルメ回転寿司市場 美浜店", stay: "-", drive: "-", transport: "走路/自駕", notes: "建議先抽號碼牌。", extra: "可點玉子燒、茶碗蒸或是熟的烏龍麵給寶寶食用。" }
+        { 
+          time: "06:30 - 08:30", title: "那霸休伊特渡假飯店 1F早餐", stay: "2h", drive: "-", hours: "06:30~10:00", transport: "-", 
+          notes: "• 飯店 1F 享用早餐，若早點吃完可提早出發", 
+          extra: "今天主要跑那霸市區與中部景點，車程都很短（10~20分鐘），節奏非常輕鬆。" 
+        },
+        { 
+          time: "08:40 - 09:10", title: "達摩寺 (西來院)", stay: "30min", drive: "10min", hours: "07:00~18:00", transport: "自駕", 
+          notes: "• 必買亮點：超人氣「透明御守」（販售時間 07:00~18:00）", 
+          extra: "早晨人潮較少，很好拍照，院內有許多可愛的達摩不倒翁造景。" 
+        },
+        { 
+          time: "09:20 - 10:20", title: "首里城", stay: "1h", drive: "10min", hours: "08:30~19:00", transport: "走路/自駕", 
+          notes: "• 11/23 重建完成正式對外開放（開放時間 08:30-19:00）！", 
+          extra: "剛好遇上 11/23 重建開放的大日子，極具紀念價值！城區部分路段為石板斜坡，推車請留意步伐或搭配揹巾。" 
+        },
+        { 
+          time: "10:40 - 11:40", title: "波上宮 / 波之上海灘 / 高架橋拍照", stay: "1h", drive: "20min", hours: "09:00~17:00", transport: "自駕", 
+          notes: "• 必買亮點：紅黑雙色「書包御守 (ランドセル守)」，各 1,000 円\n• 停車攻略：從一之鳥居進去後就是神社免費停車場（約20個車位），MAPCODE 設「33186220*06」\n• 參拜禮儀：手水舍淨身(洗左手➔洗右手➔左手漱口➔直立洗勺柄) ➔ 投入賽錢 ➔ 二禮二拍手一禮\n• 周邊美食參考：HANGERBAR CLAMP(美式漢堡)、まーや食堂(古民家沖繩料理)、麵屋一龍(拉麵)", 
+          extra: "參拜完可往下走到波之上海灘踩踩沙，或走上對面高架橋人行道拍攝「懸崖上的波上宮」經典角度！",
+          img: "naminoue.jpg"
+        },
+        { 
+          time: "12:00 - 15:00", title: "PARCO CITY - 逛街 / 午餐", stay: "3h", drive: "20min", hours: "10:00~22:00", transport: "自駕", 
+          notes: "• 午餐推薦：極味や 沖縄パルコシティ店（鐵板手打漢堡排/牛排評價極高）\n• 沖繩西海岸最大海景購物中心", 
+          extra: "商場擁有五星級育嬰室（提供熱水、尿布台、獨立哺乳間）與阿卡將本舗 (Akachan Honpo)，非常適合採買寶寶用品與讓孩子午休。" 
+        },
+        { 
+          time: "15:10 - 16:10", title: "港川外人住宅 (彈性行程)", stay: "1h", drive: "10min", hours: "約 10:30~18:00/19:00", transport: "自駕", 
+          notes: "• oHacorte 水果塔 (10:30~19:00)\n• Okinawa Cerrado Coffee 大嘴鳥咖啡 (10:30~18:00)\n• Houki Boshi 可麗露 (11:30~18:00)", 
+          extra: "美軍眷舍改建的彩色文青聚落，三間名店距離很近，可一次買齊水果塔、可麗露與冰咖啡！",
+          img: "desserts.jpg"
+        },
+        { 
+          time: "16:30 - 17:00", title: "日落沙灘 Chatan Park Sunset Beach (彈性行程)", stay: "30min", drive: "20min", hours: "09:00~17:00", transport: "自駕", 
+          notes: "• 漫步北谷日落沙灘欣賞夕陽海景", 
+          extra: "傍晚時分太陽不曬，沙灘平緩細緻，帶寶寶踏踏沙子看夕陽非常愜意。" 
+        },
+        { 
+          time: "17:00 - 20:00", title: "グルメ回転寿司市場 美浜店 & 美國村", stay: "3h", drive: "-", hours: "壽司 16:30~21:50 / 美國村 10:00~22:00", transport: "走路", 
+          notes: "• 晚餐：グルメ回転寿司市場 美浜店（沖繩縣中頭郡北谷町美浜2-4-5）\n• 停車秘訣：店門口與隔壁藥妝店共用停車場，開進來時記得跟入口人員說「要來吃壽司的」，會給一張牌子放在前擋風玻璃辨識，停車超方便！\n• 候位提醒：強烈建議一抵達就先抽號碼牌，並在店內等待以免錯過叫號！\n• 點餐攻略：價位依盤子顏色分 ¥160 / ¥200 / ¥260 / ¥320 / ¥380 / ¥460；菜單上有「紅螃蟹圖示」代表不含芥末(わさび抜き)，也可請師傅將醋飯捏小顆一點\n• 餐後散步：逛美國村 (Depot Island / Depot Central / Blue Seal 冰淇淋)", 
+          extra: "迴轉壽司有¥160玉子燒、¥200稻荷壽司、炸薯條與烏龍麵，非常適合1歲8個月寶寶吃！",
+          img: "sushi.jpg"
+        }
       ],
       4: [
-        { time: "06:30 - 09:10", title: "退房與早餐", stay: "2h40min", drive: "-", transport: "-", notes: "那霸休伊特渡假飯店。\n飯店1F早餐供應時間6:30~10:00 (若早點吃完提早出發)。", extra: "最後一天早晨多留點時間收拾寶寶的備用衣物在隨身包包內。" },
-        { time: "09:30 - 10:00", title: "OTS 臨空豐崎營業所", stay: "30min", drive: "20min", transport: "自駕", notes: "加油還車 ➔ 機場接駁車。\n重要: 還車前必須將油箱加滿, 並保留好發票交給 OTS。", extra: "租車場車流與人流混亂，卸行李時務必指派一人專職牽好寶寶。" },
-        { time: "10:10 - 13:00", title: "那霸機場", stay: "近3h", drive: "10min", transport: "機場接送", notes: "午餐/伴手禮 / 報到託運+新制機場退稅。\n2F-(國內線航廈) YUINICHI St. / 3F-A&W漢堡。\n免稅店-免稅菸酒或 Royce 巧克力、砂糖樹。\n準時排隊過安檢、出境海關。最晚13:00要抵達登機門準備登機。", extra: "A&W 漢堡的薯條可當點心。登機前記得帶寶寶去換最後一次尿布。" },
-        { time: "14:00 - 14:55", title: "那霸機場 ➔ 高雄小港", stay: "-", drive: "55min", transport: "虎航 IT289", notes: "-", extra: "備妥玩具與米餅，迎接一小時的航程回家囉！" },
-        { time: "15:55 - ", title: "溫暖的家", stay: "-", drive: "-", transport: "-", notes: "平安歸國！", extra: "辛苦了，幫寶寶洗個熱水澡好好休息！" }
+        { 
+          time: "06:30 - 09:10", title: "那霸休伊特渡假飯店 1F早餐 & 退房", stay: "2h40min", drive: "-", hours: "06:30~10:00", transport: "-", 
+          notes: "• 享用飯店 1F 早餐（若早點吃完可提早出發）\n• 檢查房內物品並辦理退房", 
+          extra: "記得將液體伴手禮（如布丁、果凍、酒類、保養品）塞入託運行李箱；寶寶的隨身水壺、尿布、米餅留在隨身背包。" 
+        },
+        { 
+          time: "09:30 - 10:00", title: "OTS 臨空豐崎營業所 加油還車 ➔ 機場接駁車", stay: "30min", drive: "20min", hours: "-", transport: "自駕", 
+          notes: "• ⚠️ 重要：還車前必須將油箱加滿 (Regular 紅色油槍)，並保留好加油發票交給 OTS 人員檢查！\n• 完成驗車後搭乘免費接駁車前往那霸機場", 
+          extra: "卸下行李與推車時，營業所車流較多，請留一位大人專職牽好寶寶。" 
+        },
+        { 
+          time: "10:10 - 13:00", title: "那霸機場 (午餐 / 伴手禮 / 報到託運 + 新制退稅)", stay: "2h50min", drive: "10min", hours: "-", transport: "機場接送", 
+          notes: "• 先辦理報到託運與新制機場退稅\n• 1F (國內線到達大廳)：豬肉蛋飯糰 (ポーたま)\n• 2F (國內線航廈 & YUINICHI St.)：福木屋年輪蛋糕、黑糖可麗露、PUZO起司蛋糕、御菓子御殿、oHacorte水果塔、鹽屋、黑船蜂蜜蛋糕、辻利抹茶、美麗海專賣店扭蛋區\n• 3F：A&W 漢堡、牛排屋88", 
+          extra: "報到託運完到 13:00 過安檢前有將近3小時，可以從國際線走到相連的國內線 2F 大肆採買，再去 3F 吃 A&W 漢堡配捲捲薯條！",
+          img: "airport.jpg"
+        },
+        { 
+          time: "13:00 - 14:00", title: "排隊過安檢、出境海關 & 登機門集合", stay: "1h", drive: "-", hours: "-", transport: "-", 
+          notes: "• 13:00 準時排隊過安檢、出境海關\n• 出境免稅店採買：免稅菸酒、Royce 巧克力、砂糖樹 (Sugar Butter Tree)\n• ⚠️ 最晚 13:00 要抵達登機門準備登機", 
+          extra: "上飛機前在候機室幫寶寶換好最後一次尿布、裝滿溫水。" 
+        },
+        { 
+          time: "14:00 - 15:55", title: "沖繩那霸機場 ➔ 高雄小港機場 ➔ 溫暖的家♡", stay: "-", drive: "1h55min", hours: "-", transport: "虎航 IT289", 
+          notes: "• 14:00 搭乘虎航 IT289 起飛 ➔ 14:55 抵達高雄小港機場\n• 15:55 抵達溫暖的家♡", 
+          extra: "平安歸國！滿載戰利品與美好回憶，回家好好休息！" 
+        }
       ]
     };
 
     function renderSchedule(day) {
+      document.getElementById('day-route-banner').innerText = dayRoutes[day] || "";
       const wrapper = document.getElementById('timeline-wrapper');
       wrapper.innerHTML = `<div class="absolute w-[2px] bg-[#EAE5DF] h-full left-[7px] top-4 z-0"></div>`;
       if(!itinerary[day]) return;
 
       itinerary[day].forEach((item) => {
+        let linksHTML = '';
+        if (item.links && item.links.length > 0) {
+          linksHTML = `<div class="flex flex-wrap gap-2 mt-3">` + item.links.map(l => 
+            `<a href="${l.url}" target="_blank" class="inline-flex items-center px-3 py-1.5 bg-[#8C7A6B] text-white text-xs font-bold rounded-xl shadow-sm hover:bg-[#736A62] transition">${l.label}</a>`
+          ).join('') + `</div>`;
+        }
+
+        let imgHTML = '';
+        if (item.img) {
+          imgHTML = `<img src="${item.img}" onerror="this.style.display='none'" onclick="openLightbox(this.src)" class="w-full rounded-xl mt-3 border border-[#EAE5DF] cursor-zoom-in" alt="行程附圖">`;
+        }
+
         wrapper.insertAdjacentHTML('beforeend', `
-          <div class="pl-8 relative mb-6 z-10">
-            <div class="absolute w-4 h-4 bg-[#8C7A6B] rounded-full left-[1px] top-2 shadow-sm border-2 border-[#F9F8F6]"></div>
+          <div class="pl-7 relative mb-6 z-10">
+            <div class="absolute w-4 h-4 bg-[#8C7A6B] rounded-full left-[0px] top-2 shadow-sm border-2 border-[#F9F8F6]"></div>
             <div class="bg-white rounded-2xl p-5 shadow-sm border border-[#EAE5DF]">
-              <div class="text-xs font-mono text-[#8C7A6B] mb-1 font-semibold">${cleanStr(item.time)}</div>
-              <h3 class="text-lg font-serif-tc font-bold text-[#3E3A39] mb-3">${cleanStr(item.title)}</h3>
+              <div class="text-xs font-mono text-[#8C7A6B] mb-1 font-bold">${cleanStr(item.time)}</div>
+              <h3 class="text-lg font-serif-tc font-bold text-[#3E3A39] mb-3 leading-snug">${cleanStr(item.title)}</h3>
               
-              <div class="flex flex-wrap gap-2 mb-4">
-                ${item.stay && item.stay !== "-" ? `<span class="bg-[#F9F8F6] border border-[#EAE5DF] text-[#736A62] text-[11px] px-2 py-1 rounded font-bold">⏱ 停留: ${cleanStr(item.stay)}</span>` : ''}
-                ${item.drive && item.drive !== "-" ? `<span class="bg-[#F9F8F6] border border-[#EAE5DF] text-[#736A62] text-[11px] px-2 py-1 rounded font-bold">🚗 車程: ${cleanStr(item.drive)}</span>` : ''}
-                ${item.transport && item.transport !== "-" ? `<span class="bg-[#F9F8F6] border border-[#EAE5DF] text-[#736A62] text-[11px] px-2 py-1 rounded font-bold">🗺️ 交通: ${cleanStr(item.transport)}</span>` : ''}
+              <div class="flex flex-wrap gap-1.5 mb-3.5">
+                ${item.stay && item.stay !== "-" ? `<span class="bg-[#F9F8F6] border border-[#EAE5DF] text-[#736A62] text-[11px] px-2.5 py-1 rounded-lg font-bold">⏱ 停留: ${cleanStr(item.stay)}</span>` : ''}
+                ${item.drive && item.drive !== "-" ? `<span class="bg-[#F9F8F6] border border-[#EAE5DF] text-[#736A62] text-[11px] px-2.5 py-1 rounded-lg font-bold">🚗 車程: ${cleanStr(item.drive)}</span>` : ''}
+                ${item.transport && item.transport !== "-" ? `<span class="bg-[#F9F8F6] border border-[#EAE5DF] text-[#736A62] text-[11px] px-2.5 py-1 rounded-lg font-bold">🗺️ 交通: ${cleanStr(item.transport)}</span>` : ''}
+                ${item.hours && item.hours !== "-" ? `<span class="bg-[#F5F2EF] text-[#8C7A6B] text-[11px] px-2.5 py-1 rounded-lg font-bold">🕒 營業: ${cleanStr(item.hours)}</span>` : ''}
               </div>
 
               <div class="text-sm text-[#5C544D] bg-[#F9F8F6] p-3.5 rounded-xl border border-[#EAE5DF] mb-3 whitespace-pre-wrap leading-relaxed"><span class="font-bold text-[#3E3A39] block mb-1">📝 項目與備註：</span>${cleanStr(item.notes)}</div>
+              
               <div class="text-sm text-[#8C7558] bg-[#FDF8F2] p-3.5 rounded-xl border border-[#F6E9DB] whitespace-pre-wrap leading-relaxed"><span class="font-bold text-[#B08953] block mb-1 flex items-center"><span class="mr-1 text-base">💡</span>行程建議 & 寶寶提示：</span>${cleanStr(item.extra)}</div>
+              
+              ${linksHTML}
+              ${imgHTML}
             </div>
           </div>
         `);
@@ -271,15 +570,16 @@
       } else {
         document.getElementById(`view-${tabId}`).classList.remove('hidden'); document.getElementById(`view-${tabId}`).classList.add('block');
       }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     renderSchedule(1);
 
     const packingList = [
-      { category: "📌 必備文件與錢包", items: ["護照", "台灣駕照", "日文譯本", "保險、護照影本", "錢包", "e-sim卡"] },
-      { category: "👕 私人物品", items: ["換洗衣服", "免洗內褲", "厚薄外套", "個人藥品", "拖鞋/襪子", "睡衣", "玩具"] },
-      { category: "🧴 美妝盥洗", items: ["美妝用品", "沐浴乳/洗髮精", "牙刷/牙膏", "洗面乳/護髮乳", "衛生棉", "浴巾"] },
-      { category: "🔌 其他", items: ["行動電源/充電線", "插頭", "口罩/雨傘", "垃圾袋/牙線", "衛生紙/濕紙巾"] }
+      { category: "📌 一定要帶", items: ["護照", "駕駛執照", "日文譯本", "保險、護照影本", "錢包 (實體信用卡/日幣)", "e-sim卡", "行動電源", "插頭 / 充電線", "口罩", "雨傘", "個人藥品", "玩具"] },
+      { category: "👕 私人物品", items: ["換洗衣服", "內衣 / 免洗內褲", "衛生棉", "浴巾", "厚薄外套", "拖鞋", "襪子", "睡衣"] },
+      { category: "🧴 美妝與盥洗用具", items: ["美妝用品", "沐浴乳", "洗髮精", "牙刷 / 牙膏", "護髮乳", "洗面乳"] },
+      { category: "🧻 其他小物", items: ["垃圾袋", "牙線", "衛生紙", "濕紙巾"] }
     ];
     const packContainer = document.getElementById("checklist-container");
     packingList.forEach((group, gIdx) => {
@@ -327,8 +627,20 @@
     }
     renderLedger();
 
-    const defaultTasks = ["出發提前1至3天填寫 Visit Japan Web", "準備實體信用卡、日幣", "確認手機可收到台灣號碼簡訊", "還車前必須將油箱加滿並保留發票"];
-    const defaultShopping = ["Royce 巧克力 (機場免稅)", "砂糖樹 (機場免稅)", "書包御守 (波上宮)"];
+    const defaultTasks = [
+      "出發前1至3天填寫 Visit Japan Web", 
+      "出發前2天於預約確認頁看 OTS 事前講解", 
+      "準備護照、台灣駕照、日文譯本、實體信用卡、日幣", 
+      "確認手機可收到台灣號碼簡訊", 
+      "許田休息站買水族館門票 4 張 (¥2,000/張)", 
+      "還車前將油箱加滿並保留發票交給 OTS"
+    ];
+    const defaultShopping = [
+      "達摩寺：透明御守 (Day 3)", 
+      "波上宮：書包御守 ¥1,000 (Day 3)", 
+      "那霸機場免稅店：Royce 巧克力、砂糖樹 (Day 4)", 
+      "那霸機場 2F：福木屋年輪蛋糕、PUZO起司蛋糕、黑船蜂蜜蛋糕"
+    ];
     function initDynamicList(containerId, storageKey, defaultArray) {
       const savedData = JSON.parse(localStorage.getItem(storageKey)) || defaultArray.map(t => ({ text: t, checked: false }));
       if(!localStorage.getItem(storageKey)) localStorage.setItem(storageKey, JSON.stringify(savedData));
